@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
-function App() {
+import Header from "./components/Header";
+import HeroBanner from "./components/HeroBanner";
+import ProductList from "./components/ProductList";
+import Footer from "./components/Footer";
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header cartCount={cartCount} />
+      <HeroBanner />
+      <ProductList />
+      <Footer />
     </div>
   );
-}
+
 
 export default App;
